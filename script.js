@@ -33,6 +33,28 @@ $(function() {
     }
 
     colorChange();
+
+
+// Save textArea in local storage
+$(".saveBtn").click(function () { 
+    // console.log(this);
+    var text = $(this).siblings(".storage").val();
+    var time = $(this).parent().attr("id");
+    // console.log(text, time);
+    localStorage.setItem(time, text);
+    console.log(text);
+});
+$("#9 .storage").val(localStorage.getItem("this"));
+// $("#10 .storage").val(localStorage.getItem("10"));
+// $("#11 .storage").val(localStorage.getItem("11"));
+// $("12 .storage").val(localStorage.getItem("12"));
+// $("#1 .storage").val(localStorage.getItem("1"));
+// $("#2 .storage").val(localStorage.getItem("2"));
+// $("#3 .storage").val(localStorage.getItem("3"));
+// $("#4 .storage").val(localStorage.getItem("4"));
+// $("#5 .storage").val(localStorage.getItem("5"));
+
+
     // var currentClock = currentHour.hour() + ':' + currentHour.minutes();
     // currentClock = currentClock + ((currentHour.hour()) >= 12 ? ' pm' : ' am');
     // var currentClockNum = parseInt(currentClock);
