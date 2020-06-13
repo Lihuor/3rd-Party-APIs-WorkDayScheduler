@@ -11,8 +11,9 @@ $(document).ready(function() {
 
         // creating color for past, present and future
         $(".time-block").each(function () {
-            var hourNum = parseInt($(this).attr("id").split("-")[1]);
-            // console.log(hourNum, currentHour)
+            var hourNum = parseInt($(this).attr("id"));
+
+            console.log(hourNum, currentHour);
 
             // Comparing the time
             if (hourNum < currentHour) {
@@ -31,9 +32,8 @@ $(document).ready(function() {
 
     colorChange();
 
-
     // Save textArea in local storage
-    var saves = setInterval(colorChange, 15000);
+    // var saves = setInterval(colorChange, 15000);
     $(".saveBtn").click(function () { 
         // console.log(this);
         var text = $(this).siblings(".storage").val();
@@ -42,8 +42,7 @@ $(document).ready(function() {
         localStorage.setItem(time, text);
         console.log(text);
     });
-    // $("#9 .storage").val(localStorage.getItem("this"));
-    // console.log($("#9 .storage").val(localStorage.getItem("this")));
+
     $("#9 .storage").val(localStorage.getItem("9"));
     $("#10 .storage").val(localStorage.getItem("10"));
     $("#11 .storage").val(localStorage.getItem("11"));
@@ -55,5 +54,7 @@ $(document).ready(function() {
     $("#5 .storage").val(localStorage.getItem("5"));
 
     // $("#currentDay").text(moment().format('YYYY MM DD'));
-    
+    $(".btn-danger").click(function() {
+    $("textarea").val("");
+    });
 });
