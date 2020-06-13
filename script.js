@@ -47,11 +47,11 @@ $(document).ready(function() {
     $("#10 .storage").val(localStorage.getItem("10"));
     $("#11 .storage").val(localStorage.getItem("11"));
     $("12 .storage").val(localStorage.getItem("12"));
-    $("#1 .storage").val(localStorage.getItem("1"));
-    $("#2 .storage").val(localStorage.getItem("2"));
-    $("#3 .storage").val(localStorage.getItem("3"));
-    $("#4 .storage").val(localStorage.getItem("4"));
-    $("#5 .storage").val(localStorage.getItem("5"));
+    $("#13 .storage").val(localStorage.getItem("13"));
+    $("#14 .storage").val(localStorage.getItem("14"));
+    $("#15 .storage").val(localStorage.getItem("15"));
+    $("#16 .storage").val(localStorage.getItem("16"));
+    $("#17 .storage").val(localStorage.getItem("17"));
 
     // $("#currentDay").text(moment().format('YYYY MM DD'));
     $(".btn-danger").click(function() {
